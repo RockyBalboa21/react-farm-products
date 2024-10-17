@@ -11,10 +11,13 @@ function PageWrapper() {
       <Header />
       <main className="page-wrapper__main">
         <MainPage />
-        <h3>Вёрстка блока About</h3>
-
-        <div>Блок About появился на странице.</div>
+        <div>
+        <h3>Вёрстка блока FeaturesList</h3>
+        <p>По аналогии с About реализуем блок FeaturesList и вставим его на страницу под About. На данный момент мы делаем всю вёрстку статичной, не думая о данных, поэтому FeatureCard будет включать в себя только одну карточку с преимуществами со статичными данными.</p>
+        <p>Опишем стили в style.css. Реализуем компонент FeatureCard, заполнив его статическими данными</p>
+      </div>
       </main>
+
       <Footer />
     </>
   );
