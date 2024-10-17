@@ -5,7 +5,7 @@ import FeatureCard from "../../ui/feature-card/feature-card";
 import "./style.css";
 
 // список преимуществ
-function FeaturesList() {
+function FeaturesList({ features }) {
   return (
     <section className="features">
       <Title>Почему фермерские продукты лучше?</Title>
