@@ -11,9 +11,9 @@ function PageWrapper() {
       <Header />
       <main className="page-wrapper__main">
         <MainPage />
-        <h3>Вёрстка layout</h3>
+        <h3>Вёрстка блока About</h3>
 
-        <div>По аналогии можно создать и написать стили для всех компонентов директории layout, а также использующихся в layout компонентов Button и Logo. В результате, если подключить PageWrapper в App, то будет выведена страница с шапкой и подвалом, но пока без контента.</div>
+        <div>Блок About появился на странице.</div>
       </main>
       <Footer />
     </>
