@@ -6,17 +6,19 @@ import "./style.css";
 
 // список преимуществ
 function FeaturesList({ features }) {
-  return (
+  return features && features.length ? (
     <section className="features">
       <Title>Почему фермерские продукты лучше?</Title>
       <ul className="features__list">
-        <li className="features__item">
-          <FeatureCard />
-        </li>
+        {features.map((feature) => (
+          <li className="features__item" key={feature.id}>
+            <FeatureCard feature={feature} />
+          </li>
+        ))}
       </ul>
       <Button>Купить</Button>
     </section>
-  );
+  ) : null;
 }
 
 export default FeaturesList;

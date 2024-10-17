@@ -5,19 +5,21 @@ import MainPage from "/src/components/pages/main-page/main-page";
 import "./style.css";
 
 // Обёртка для контента страниц
-function PageWrapper() {
+function PageWrapper({ features }) {
   return (
     <>
       <Header />
       <main className="page-wrapper__main">
-        <MainPage />
-        <div>
-        <h3>Моки</h3>
-        <p>Создадим в директории mocks файл features.js, в котором будет хранить данные о преимуществах фермерских продуктов</p>
-        <p>Подключим features в компонент App и через props прокинем до компонента FeaturesList.</p>
-      </div>
-      </main>
+        <MainPage features={features} />
 
+        <div>
+          <h3>Шаблонизация FeaturesList</h3>
+          <p>Внутри компонента FeaturesList нужно c помощью map превратить каждый элемент массива features в компонент FeatureCard. </p>
+          <p>Нужно учесть, что в списке преимуществ может по ошибке прийти не массив. Это нужно проверить через features && features.length</p>
+          <p>Теперь на экран будет выведено столько карточек, сколько есть элементов в массиве features.</p>
+
+        </div>
+      </main>
       <Footer />
     </>
   );

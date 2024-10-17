@@ -4,5 +4,5 @@ import features from "/src/mocks/features";
 import "./style.css";
 
 export default function App() {
-  return <PageWrapper />;
+  return <PageWrapper features={features} />;
 }
