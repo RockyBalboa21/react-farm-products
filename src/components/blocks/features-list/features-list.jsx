@@ -12,7 +12,7 @@ function FeaturesList({ features }) {
       <ul className="features__list">
         {features.map((feature) => (
           <li className="features__item" key={feature.id}>
-            <FeatureCard feature={feature} />
+            <FeatureCard {...feature} />
           </li>
         ))}
       </ul>

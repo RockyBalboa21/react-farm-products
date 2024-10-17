@@ -2,28 +2,39 @@ import React from "react";
 import Title, { TitleSize } from "../title/title";
 import "./style.css";
 
-// Карточка
-function FeatureCard() {
+// Карточка с преимуществами
+function FeatureCard({
+                       title, // название особенности
+                       owner, // владелец особенности (обычный магазин, фермерский)
+                       about, // описание особенности
+                       isNegative, // является ли особенность отрицательной
+                       image // иконка
+                    }) {
   return (
-    <section className="feature">
+    <section className={`feature${isNegative ? " feature_negative" : ""}`}>
       <header className="feature__header">
         <img
           className="feature__img"
           width={56}
           height={56}
-          src="https://i.ibb.co/xGg2GfP/eat-1.png"
-          alt="Еда намного вкуснее"
+          src={image}
+          alt={title}
         />
         <div>
-          <span className="feature__owner">Фермерские продукты</span>
-          <Title size={TitleSize.EXTRA_SMALL}>Еда намного вкуснее</Title>
+          <span
+            className={`feature__owner${
+              isNegative ? " feature__owner_negative" : ""
+            }`}
+          >
+            {owner}
+          </span>
+          <Title size={TitleSize.EXTRA_SMALL}>{title}</Title>
         </div>
       </header>
-      <p className="feature__text">
-        Домашняя колбаса из&nbsp;мяса, соли и&nbsp;специй и&nbsp;колбаса
-        из&nbsp;магазина&nbsp;&mdash; два настолько разных продукта, что они
-        даже не&nbsp;родственники
-      </p>
+      <p
+        className="feature__text"
+        dangerouslySetInnerHTML={{ __html: about }}
+      />
     </section>
   );
 }
