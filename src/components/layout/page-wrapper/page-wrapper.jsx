@@ -11,13 +11,6 @@ function PageWrapper({ features }) {
       <Header />
       <main className="page-wrapper__main">
         <MainPage features={features} />
-
-        <div>
-          <h3>Реализация компонента FeatureCard</h3>
-          <p>Подставим данные из props feature в JSX-разметку компонента FeatureCard. Для негативных карточек будем использовать модификатор «negative». В результате FeatureCard после шаблонизации будет выглядеть так. </p>
-          <p>Главная страница готова.</p>
-
-        </div>
       </main>
       <Footer />
     </>
