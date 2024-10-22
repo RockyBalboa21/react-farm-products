@@ -11,6 +11,8 @@ function PageWrapper({ features }) {
       <Header />
       <main className="page-wrapper__main">
         <MainPage features={features} />
+
+        {/* не получается запустить проект */}
       </main>
       <Footer />
     </>
