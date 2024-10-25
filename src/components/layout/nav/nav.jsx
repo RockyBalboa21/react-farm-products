@@ -4,7 +4,7 @@ import Button from "/src/components/ui/button/button";
 function Nav() {
   return (
     <nav>
-      <Button>Купить билет</Button>
+      <Button link="/buy">Купить</Button>
     </nav>
   );
 }
