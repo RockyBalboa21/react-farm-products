@@ -33,6 +33,10 @@
 //     margin-bottom: 40px;
 // }
 
+// (Шаг 7. Рефакторинг About)
+
+// Переделал блок About на styled-components, в коммите Шаг 6.
+
 import styled from "styled-components";
 import { P, Section } from "/src/components/styled";
 import aboutImage from "/src/assets/about.svg";
