@@ -1,5 +1,20 @@
-import React from "react";
-import "./style.css";
+// import React from "react";
+// import "./style.css";
+
+// export const TitleSize = {
+//   BIG: "big",
+//   MEDIUM: "medium",
+//   SMALL: "small",
+//   EXTRA_SMALL: "extra_small"
+// };
+
+// function Title({ children, size }) {
+//   return <h1 className={`title${size ? ` title_${size}` : ""}`}>{children}</h1>;
+// }
+
+// export default Title;
+
+import styled, { css } from "styled-components";
 
 export const TitleSize = {
   BIG: "big",
@@ -8,8 +23,39 @@ export const TitleSize = {
   EXTRA_SMALL: "extra_small"
 };
 
-function Title({ children, size }) {
-  return <h1 className={`title${size ? ` title_${size}` : ""}`}>{children}</h1>;
-}
+const TitleSizeValue = {
+  [TitleSize.BIG]: {
+    fontSize: "44px",
+    lineHeight: "50px"
+  },
+  [TitleSize.MEDIUM]: {
+    fontSize: "36px",
+    lineHeight: "41px"
+  },
+  [TitleSize.SMALL]: {
+    fontSize: "24px",
+    lineHeight: "31px"
+  },
+  [TitleSize.EXTRA_SMALL]: {
+    fontSize: "18px",
+    lineHeight: "27px"
+  }
+};
+
+// Заголовок
+export const Title = styled.h1`
+  margin: 0;
+  padding: 0;
+  margin-bottom: ${(props) => props.marginBottom || 0}px;
+  font-weight: bold;
+  ${(props) => {
+    const values = TitleSizeValue[props.size || TitleSize.MEDIUM];
+    return css`
+      font-size: ${values.fontSize};
+      line-height: ${values.lineHeight};
+    `;
+  }};
+`;
 
 export default Title;
+
