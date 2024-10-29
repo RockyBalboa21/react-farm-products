@@ -24,7 +24,6 @@
 
 // Переделал блок About на styled-components, в коммите Шаг 6.
 
-import React from "react";
 import Title, { TitleSize } from "/src/components/ui/title/title";
 import { Text, StyledAbout } from "./styles";
 

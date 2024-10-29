@@ -1,6 +1,6 @@
-import React from "react";
 import Title, { TitleSize } from "../title/title";
 import { Feature, Image, Owner, Header, Text } from "./styles";
+import PropTypes from 'prop-types';
 
 // Карточка
 function FeatureCard({
@@ -11,11 +11,11 @@ function FeatureCard({
   image // иконка
 }) {
   return (
-    <Feature isNegative={isNegative}>
+    <Feature $isNegative={isNegative}>
       <Header>
         <Image width={56} height={56} src={image} alt={title} />
         <div>
-          <Owner isNegative={isNegative}>{owner}</Owner>
+          <Owner $isNegative={isNegative}>{owner}</Owner>
           <Title as="h3" size={TitleSize.EXTRA_SMALL}>
             {title}
           </Title>
@@ -25,5 +25,15 @@ function FeatureCard({
     </Feature>
   );
 }
+
+// Добавляем propTypes для валидации пропсов
+FeatureCard.propTypes = {
+    title: PropTypes.string.isRequired,
+    owner: PropTypes.string.isRequired,
+    about: PropTypes.string.isRequired,
+    isNegative: PropTypes.bool.isRequired,
+    image: PropTypes.string.isRequired,
+};
+
 
 export default FeatureCard;
