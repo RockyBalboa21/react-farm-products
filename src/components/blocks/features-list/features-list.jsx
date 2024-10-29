@@ -1,10 +1,12 @@
-import PropTypes from 'prop-types';
+import PropTypes from 'prop-types'; // Добавляем propTypes для валидации пропсов
 import FeatureCard from "/src/components/ui/feature-card/feature-card";
 import { Ul, Li } from "/src/components/styled";
 import { Features, StyledButton, StyledTitle } from "./styles";
 
 // список преимуществ
-function FeaturesList({ features }) {
+function FeaturesList({
+    features // преимущества - массив объектов с id, title, owner, isNegative, image, about
+}) {
     return features && features.length ? (
         <Features>
             <StyledTitle as="h2">Почему фермерские продукты лучше?</StyledTitle>
