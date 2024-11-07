@@ -3,10 +3,10 @@ import { StyledButton } from "./styles";
 
 function Button({
     children, // дочерний элемент, отображаемый в кнопке
-    link, // ссылка
-    maxWidth, // делает кнопку на 100% родителя
-    className, // класс
-    onClick, // событие по клику
+    link = null, // ссылка
+    maxWidth = false, // делает кнопку на 100% родителя
+    className = '', // класс
+    onClick = null, // событие по клику
     ...props // остальные переданные пропсы
 }) {
     return (
@@ -28,13 +28,6 @@ Button.propTypes = {
     maxWidth: PropTypes.bool,
     className: PropTypes.string,
     onClick: PropTypes.func,
-};
-
-Button.defaultProps = {
-    link: null,
-    maxWidth: false,
-    className: '',
-    onClick: null,
 };
 
 export default Button;
