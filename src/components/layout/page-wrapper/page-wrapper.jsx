@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import Header from "/src/components/layout/header/header";
 import Footer from "/src/components/layout/footer/footer";
-import BuyPage from "/src/components/pages/buy-page/buy-page";
+import Order from "/src/components/pages/order/order";
 import { Main } from "./styles";
 
 // Обёртка для контента страниц
@@ -10,7 +10,7 @@ function PageWrapper({ ...prop }) {
         <>
             <Header />
             <Main>
-                <BuyPage {...prop} />
+                <Order {...prop} />
             </Main>
             <Footer />
         </>
