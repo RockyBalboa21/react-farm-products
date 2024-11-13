@@ -8,9 +8,10 @@ import {
     PriceLabel,
     PriceValue,
 } from "./styles";
+import PropTypes from 'prop-types';
 
 // Оформление заказа
-function Order() {
+function Order({ products }) {
     return (
         <StyledOrder as="form">
             <LeftColumn>
@@ -38,5 +39,31 @@ function Order() {
         </StyledOrder>
     );
 }
+
+// Указываем propTypes для валидации
+Order.propTypes = {
+    products: PropTypes.arrayOf(
+        PropTypes.shape({
+            id: PropTypes.number.isRequired,
+            name: PropTypes.string.isRequired,
+            description: PropTypes.string.isRequired,
+            price: PropTypes.number.isRequired,
+            weight: PropTypes.number.isRequired,
+            image: PropTypes.string.isRequired,
+            specifications: PropTypes.arrayOf(
+                PropTypes.shape({
+                    property: PropTypes.string.isRequired,
+                    value: PropTypes.string.isRequired,
+                })
+            ).isRequired,
+            structure: PropTypes.arrayOf(
+                PropTypes.shape({
+                    property: PropTypes.string.isRequired,
+                    value: PropTypes.string.isRequired,
+                })
+            ).isRequired,
+        })
+    ).isRequired,
+};
 
 export default Order;
