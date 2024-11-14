@@ -11,7 +11,7 @@ function Order() {
 				Телефон: <input type="tel" />
 			</Label>
 			<Label>
-				Адрес доставки: <input />
+				Ваш e-mail адрес: <input type="email" />
 			</Label>
 			<Button>ГОТОВО</Button>
 		</form>
