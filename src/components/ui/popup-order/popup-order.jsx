@@ -1,7 +1,7 @@
 import Button from "/src/components/ui/button/button";
 import { Label } from "./styles";
 
-function Order() {
+function OrderPopup() {
 	return (
 		<form>
 			<Label>
@@ -18,4 +18,4 @@ function Order() {
 	);
 }
 
-export default Order;
+export default OrderPopup;

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import PopUp from "/src/components/ui/popup/popup";
-import Order from "/src/components/ui/order/order";
 import Button from "/src/components/ui/button/button"
+import OrderPopup from "../../ui/popup-order/popup-order";
 
 
 function Nav() {
@@ -16,7 +16,7 @@ function Nav() {
 				onClose={() => setIsShowPopup(false)}
 				title="Оформить заказ"
 			>
-				<Order />
+				<OrderPopup />
 			</PopUp>
     </nav>
   );
