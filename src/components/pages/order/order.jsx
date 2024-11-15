@@ -79,6 +79,7 @@ function Order({
                         value={address}
                         onChange={(e) => setAddress(e.target.value)}
                         placeholder="Введите адрес доставки"
+                        autoComplete="address"
                     />
                     <PriceLabel as="span">Цена</PriceLabel>
                     <PriceValue value={fullPrice} />
