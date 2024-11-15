@@ -23,8 +23,13 @@ import 'swiper/css/bundle';
 // Оформление заказа
 function Order({ products }) {
     SwiperCore.use([Mousewheel, Pagination, Scrollbar]);
+    const [swiperRef, setSwiperRef] = useState(null);
     const [selectProductIds, setSelectProductIds] = useState([]);
-
+    const handleOnClickProduct = (value, index) => {
+        if (!selectProductIds.includes(value)) {
+        swiperRef.slideTo(index, 0);
+        }
+    };
     return (
         <StyledOrder as="form">
             <LeftColumn>
@@ -46,6 +51,7 @@ function Order({ products }) {
                         }))}
                         selectValues={selectProductIds}
                         onChange={setSelectProductIds}
+                        onClickLabel={handleOnClickProduct}
                     />
                 </Panel>
                 <Panel>
@@ -59,6 +65,7 @@ function Order({ products }) {
                 </Panel>
             </LeftColumn>
             <ProductSwiper
+                onSwiper={setSwiperRef}
                 spaceBetween={12}
                 direction="vertical"
                 slidesPerView="auto"
