@@ -21,10 +21,17 @@ import 'swiper/css';
 import 'swiper/css/bundle';
 
 // Оформление заказа
-function Order({ products }) {
+function Order({
+  products // список продуктов
+}) {
     SwiperCore.use([Mousewheel, Pagination, Scrollbar]);
     const [swiperRef, setSwiperRef] = useState(null);
     const [selectProductIds, setSelectProductIds] = useState([]);
+
+//id в продукты
+    const selectProducts = selectProductIds.map((id) => products.find((product) => product.id === id));
+//цена покупки
+    const fullPrice = selectProducts.reduce((sum, product) => (sum += product.price), 0);
     const handleOnClickProduct = (value, index) => {
         if (!selectProductIds.includes(value)) {
         swiperRef.slideTo(index, 0);
@@ -60,7 +67,7 @@ function Order({ products }) {
                     </Title>
                     <AddressInput placeholder="Введите адрес доставки" />
                     <PriceLabel as="span">Цена</PriceLabel>
-                    <PriceValue>400</PriceValue>
+                    <PriceValue value={fullPrice} />
                     <Button maxWidth>Купить</Button>
                 </Panel>
             </LeftColumn>

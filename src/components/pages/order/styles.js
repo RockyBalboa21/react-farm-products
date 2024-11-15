@@ -3,6 +3,7 @@ import { Section, Label } from "/src/components/styled";
 import TextInput from "/src/components/ui/text-input/text-input";
 import { Swiper } from "swiper/react";
 import checkboxSelect from "/src/assets/checkbox.svg";
+import Price from "/src/components/ui/price/price";
 
 const leftWidth = "353px";
 
@@ -33,10 +34,7 @@ export const PriceLabel = styled(Label)`
     margin-bottom: 6px;
 `;
 
-export const PriceValue = styled.span`
-    display: block;
-    font-size: 24px;
-    font-weight: bold;
+export const PriceValue = styled(Price)`
     margin-bottom: 30px;
 `;
 
