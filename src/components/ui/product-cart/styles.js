@@ -6,11 +6,14 @@ export const ProductImage = styled(Img)`
 	width: 248px;
 	height: 248px;
 	margin-right: 20px;
+	object-fit: cover; /* Поддерживает одинаковый размер и обрезает изображение по необходимости */
+	object-position: center; /* Центрирует изображение */
 `;
 
 export const ContentWrapper = styled.div`
-	position: relative;
-	float: right;
+	position: absolute;
+	top: 20px;
+	left: 288px;
 	width: 417px;
 	min-height: 248px;
 	padding-bottom: 30px;

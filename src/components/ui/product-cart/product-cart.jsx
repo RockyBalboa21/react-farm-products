@@ -40,7 +40,7 @@ ProductCart.propTypes = {
     product: PropTypes.shape({
         image: PropTypes.string.isRequired,
         name: PropTypes.string.isRequired,
-        description: PropTypes.string.isRequired, // Добавлено
+        description: PropTypes.string.isRequired,
         price: PropTypes.number.isRequired,
         weight: PropTypes.number.isRequired,
         specifications: PropTypes.arrayOf(

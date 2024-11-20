@@ -2,10 +2,6 @@ import styled from "styled-components";
 import { Section } from "/src/components/styled";
 
 export const StyledSection = styled(Section)`
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	right: 0;
 	display: flex;
 	width: ${(props) => props.theme.pageWidth};
 	margin: 0 auto;

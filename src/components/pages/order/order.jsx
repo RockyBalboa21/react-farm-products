@@ -11,7 +11,7 @@ import {
     PriceLabel,
     PriceValue,
     ProductSwiper,
-    CheckboxLabel,
+    CheckboxLabel
 } from "./styles";
 import PropTypes from 'prop-types';
 import { Pagination, Mousewheel, Scrollbar } from 'swiper/modules';

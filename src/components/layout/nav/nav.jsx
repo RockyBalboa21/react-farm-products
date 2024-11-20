@@ -13,7 +13,7 @@ function Nav() {
 
     return (
         <nav>
-            <Button onClick={() => setIsShowPopup(true)}>Купить</Button>
+            <Button onClick={() => setIsShowPopup(true)}>Оформить заказ</Button>
 
             <PopUp
                 isShow={isShowPopup}

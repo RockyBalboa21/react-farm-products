@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
-export const StyledButton = styled.a`
+export const StyledButton = styled(Link)`
 	display: block;
 	min-height: 60px;
 	padding: 0 24px;
@@ -10,6 +11,7 @@ export const StyledButton = styled.a`
 	font-weight: bold;
 	line-height: 58px;
 	text-align: center;
+	vertical-align: middle;
 	text-decoration: none;
 	color: ${(props) => props.theme.colorWhite};
 	background-color: ${(props) => props.theme.buttonColor};
