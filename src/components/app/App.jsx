@@ -6,6 +6,7 @@ import Order from "/src/components/pages/order/order";
 import { AppRoute } from "/src/const";
 import features from "/src/mocks/features";
 import products from "/src/mocks/products";
+import ScrollTop from "/src/components/ui/scroll-top/scroll-top";
 import { GlobalStyle } from "./styles";
 
 // Корневой компонент всего приложения
@@ -14,6 +15,7 @@ function App() {
 		<>
 			<GlobalStyle />
 			<Router>
+				<ScrollTop />
 				<Routes>
 					<Route path={AppRoute.MAIN} element={<PageWrapper />}>
 						<Route
