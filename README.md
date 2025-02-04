@@ -30,7 +30,7 @@
 ---
 
 ### Обзор проекта
-<a href="#" target="_blank">«Farm products»</a>
+<a href="https://g-farm-products.netlify.app" target="_blank">«Farm products»</a>
 
 #### Главная страница
 <img src="./readmi_image/course_react_farm_products.png" />
